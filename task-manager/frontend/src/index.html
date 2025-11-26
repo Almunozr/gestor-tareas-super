@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas Básico</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div id="app">
+        <header class="app-header">
+            <h1>📋 Gestor de Tareas Básico</h1>
+            <p>Organiza tus tareas de manera simple y eficiente</p>
+        </header>
+        
+        <main class="app-main">
+            <section class="add-task-section">
+                <form id="task-form" class="task-form">
+                    <div class="form-group">
+                        <label for="task-input">Nueva tarea:</label>
+                        <div class="input-group">
+                            <input 
+                                type="text" 
+                                id="task-input" 
+                                class="task-input"
+                                placeholder="Describe tu tarea..." 
+                                required
+                                maxlength="200"
+                            >
+                            <button type="submit" class="btn btn-primary">
+                                ➕ Agregar
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+            
+            <section class="tasks-section">
+                <div id="task-list-container">
+                    <!-- El componente TaskList se renderizará aquí -->
+                </div>
+            </section>
+        </main>
+        
+        <footer class="app-footer">
+            <p>Task Manager - Desarrollado con NestJS y Vanilla JavaScript</p>
+        </footer>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="components/task-list.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
